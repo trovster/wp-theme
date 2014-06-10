@@ -1,0 +1,142 @@
+/**
+* =forms
+* @section Forms
+* --------------------------------------------------------------------------------------------------
+*/
+form {
+	@include clearfix;
+	@include position(relative, 0 0 0 0);
+	display: block;
+	padding: 0; margin: 0 0 25px;
+	border: 0;
+	
+	fieldset {
+		@include clearfix;
+		@include position(relative, 0 0 0 0);
+		display: block;
+		padding: 0; margin: 0;
+		border: 0;
+	}
+	
+	legend {
+		@extend %access;
+	}
+
+	label {
+		display: block;
+		padding: 0 0 3px;
+		color: #000; font-size: 12px;
+		
+		.required,
+		.gfield_required {
+			margin-left: 3px;
+			color: #000;
+		}
+	}
+
+	input,
+	input[type="search"],
+	textarea {
+		width: 100%;
+		padding: 8px;
+		color: #000; font-size: 14px; text-align: left;
+		background: #fff;
+		border-radius: 5px;
+		outline: 0;
+
+		@include box-sizing(border-box);
+
+		-moz-box-shadow: none;
+			 box-shadow: none;
+	}
+	input.placeholder,
+	textarea.placeholder {
+		color: #aaa;
+	}
+	
+	textarea {
+		height: 150px; min-height: 100px;
+		line-height: 1.5;
+		resize: vertical;
+	}
+	
+	select {
+		width: 100%;
+	}
+	
+} // end of form
+
+.gform_wrapper {
+	@include clearfix;
+	@include position(relative, 0 0 0 0);
+	
+	ul,
+	ol,
+	li {
+		@extend %reset-list;
+	}
+	
+	.gform_title {
+		display: none;
+		text-align: center;
+	}
+	
+	.validation_error,
+	.gform_description {
+		display: block;
+		margin: 0 0 1em;
+		font-size: 18px; line-height: 1.25; text-align: center;
+	}
+	.validation_message {
+		display: block;
+		padding-top: 3px;
+		font-size: 12px;
+	}
+	.gform_ajax_spinner {
+		clear: both;
+		display: none !important;
+		width: auto !important;
+	}
+	
+	.gform_body {
+		
+		.gfield {
+			margin: 0 0 10px;
+		}
+		
+		.gform_hidden {
+			display: none !important;
+		}
+		
+		.gfield_checkbox,
+		.gfield_radio {
+			@include clearfix;
+			@include position(relative, 0 0 0 0);
+			
+			.gfield_label {}
+			
+			.ginput_container {
+				padding-left: 3px;
+			
+				input {
+					width: auto;
+					margin: 0 10px 0 0;
+					border: 0;
+					background: transparent;
+				}
+				label {
+					display: inline;
+					padding: 0;
+				}
+			}
+		}
+	}
+	
+	.gform_footer {
+		clear: both;
+		
+		.gform_button {
+			@extend %button;
+		}
+	}
+} // end of div .gform_wrapper

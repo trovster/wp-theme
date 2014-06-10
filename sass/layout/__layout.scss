@@ -1,0 +1,24 @@
+/* @import */
+@import 'general';
+@import 'header';
+@import 'footer';
+@import 'nav';
+@import 'content';
+
+body.admin-bar {
+	
+	html.js & {
+		#header,
+		#nav-mobile {
+			top: 32px;
+			
+			@include breakpoint('782px') {
+				top: 46px;
+			}
+		}
+		
+		#wpadminbar {
+			position: fixed !important;
+		}
+	}
+}

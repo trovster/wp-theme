@@ -1,0 +1,36 @@
+/**
+* =isotope
+* @section Isotope Filtering
+* --------------------------------------------------------------------------------------------------
+*/
+.isotope-item {
+	z-index: 2;
+	
+	&.isotope-hidden {
+		z-index: 1;
+		pointer-events: none;
+	}
+}
+
+/* @group Isotope CSS3 transitions */
+.isotope {
+	@include transition-property (height, width);
+	
+	&,
+	.isotope-item {
+		@include transition-duration (800ms);
+	}
+	
+	.isotope-item {
+		@include transition-property (transform, opacity);
+	}
+}
+/* @end */
+
+/* @group disabling Isotope CSS3 transitions */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+	@include transition-duration (0ms);
+}
+/* @end */

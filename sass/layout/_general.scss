@@ -1,0 +1,248 @@
+/**
+* =general
+* @section General Layout
+* --------------------------------------------------------------------------------------------------
+*/
+html,
+html body {
+	overflow-x: hidden;
+	min-width: 0;
+	font-family: $fontfamily;
+	font-size: 16px; line-height: 1.5; font-weight: 400; text-align: left;
+	color: $textcolor;
+	background: $bodycolor;
+}
+html.lt-ie9,
+html.lt-ie9 body {
+	overflow: visible; overflow-x: visible;
+}
+html.lt-ie8 {
+	overflow: auto;
+}
+
+#wrapper {
+	position: relative; z-index: 100;
+	min-width: 320px;
+	padding: 0; margin: 0 auto;
+	background: $bodycolor;
+	
+	html.js & {
+		padding-top: 110px;
+	}
+	html.lt-ie9 & {
+		padding-top: 0;
+	}
+	
+	@include breakpoint('tablet') {
+		padding-top: 0;
+		
+		html.js & {
+			padding-top: 110px;
+		}
+		html.lt-ie9 & {
+			padding-top: 0;
+		}
+	}
+	@include breakpoint('mobile') {
+		padding-top: 0;
+		
+		html.js & {
+			padding-top: 110px;
+		}
+		html.lt-ie9 & {
+			padding-top: 0;
+		}
+	}
+}
+
+
+/**
+* =breakpoints
+* @section Breakpoints
+* --------------------------------------------------------------------------------------------------
+*/
+body:after {
+	position: absolute; top: 0; left: 0;
+	display: none;
+	height: 0; width: 0;
+	content: 'desktop';
+}
+
+@include breakpoint('tablet') {
+	body:after {
+		content: 'tablet';
+	}
+}
+@include breakpoint('mobile') {
+	body:after {
+		content: 'mobile';
+	}
+}
+@include breakpoint('small') {
+	body:after {
+		content: 'small';
+	}
+}
+
+
+/**
+* =typography
+* @section typography
+* --------------------------------------------------------------------------------------------------
+*/
+h1, h2, h3, h4, h5, h6,
+ol, ul, p, blockquote {
+	margin: 0 0 1em;
+}
+
+/* @group =Headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fontfamily;
+	font-weight: 400; color: #000;
+}
+h1, h2, h3, h4 {
+	position: relative; overflow: hidden;
+	margin: 0 0 15px;
+	font-size: 40px; line-height: 1.15; letter-spacing: -0.04em;
+	text-overflow: ellipsis;
+}
+h1 {
+	text-align: center;
+}
+h1, h2 {
+	font-weight: 400;
+}
+h2 {}
+h3 {
+	margin-bottom: 10px;
+	font-size: 18px; line-height: 1.25; color: #900;
+}
+h4 {
+	margin-bottom: 0;
+	font-size: 14px; line-height: 1.25; color: #000;
+}
+/* @end */
+
+a {
+	color: #000; font-weight: 400; text-decoration: underline;
+	
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none; color: #000;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%; height: auto; width: 100%;
+	
+	div.map & {
+		max-width: none;
+	}
+}
+
+hr {
+	position: relative; overflow: hidden;
+	clear: both;
+	display: block;
+	height: 1px; width: 100%;
+	margin: 20px 0;
+	border: 0;
+	background: #fff;
+}
+
+address {
+	font-style: normal;
+
+	span {
+		display: block;
+		
+		span {
+			display: inline;
+		}
+	}
+}
+.geo {
+	@extend %access;
+}
+
+abbr,
+abbr[title] {
+	text-decoration: none;
+	border: 0;
+}
+
+strong em,
+em strong {
+	font-weight: bold; font-style: normal; color: #00AEEF;
+}
+
+blockquote {
+	margin-left: 25px;
+	font-style: normal;
+}
+
+.video-wrapper {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%; padding-top: 25px; margin-bottom: 30px;
+	
+	iframe {
+		position: absolute; top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+}
+	
+
+/* @group WordPress required classes */
+.alignright {
+	float: right;
+	width: auto;
+	margin: 0 0 10px 15px;
+	text-align: right;
+	
+	img {
+		width: auto;
+	}
+}
+.alignleft {
+	float: left;
+	width: auto;
+	margin: 0 15px 10px 0;
+	text-align: left;
+	
+	img {
+		width: auto;
+	}
+}
+.aligncenter {
+	display: block;
+	width: auto;
+	margin: 0 auto 1em;
+	
+	img {
+		width: auto;
+	}
+}
+.alignnone {
+	width: auto;
+	
+	img {
+		width: auto;
+	}
+}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+		
+.wp-caption {
+	position: relative;
+	
+	img {}
+	
+	.wp-caption-text {
+		margin-bottom: 0;
+	}
+}
+/* @end */

@@ -1,0 +1,85 @@
+/*
+* @updated		06/2014
+* @author		Trevor Morris / Surface, designed by The Design Frontier
+* @project		The Design Frontier (admin)
+* --------------------------------------------------------------------------------------------------*/
+div.postbox .tmce-active iframe {
+  background-color: #fff;
+}
+
+address.adr {
+  font-style: normal;
+}
+
+address.adr span {
+  display: block;
+}
+
+address.adr span span {
+  display: inline;
+}
+
+address.adr .geo {
+  display: none;
+}
+
+#cpt_info_box {
+  display: none;
+}
+
+.form-field .mupload_img_holder img {
+  height: auto !important;
+}
+
+#product_dimensions .inside,
+#product_code .inside {
+  *zoom: 1;
+  position: relative;
+}
+#product_dimensions .inside:before, #product_dimensions .inside:after,
+#product_code .inside:before,
+#product_code .inside:after {
+  content: " ";
+  display: table;
+}
+#product_dimensions .inside:after,
+#product_code .inside:after {
+  clear: both;
+}
+#product_dimensions .custom-field-dimension_width,
+#product_dimensions .custom-field-dimension_depth,
+#product_dimensions .custom-field-dimension_height,
+#product_dimensions .custom-field-code,
+#product_code .custom-field-dimension_width,
+#product_code .custom-field-dimension_depth,
+#product_code .custom-field-dimension_height,
+#product_code .custom-field-code {
+  position: relative;
+  float: left;
+  margin-right: 25px;
+}
+#product_dimensions .custom-field-dimension_width label,
+#product_dimensions .custom-field-dimension_depth label,
+#product_dimensions .custom-field-dimension_height label,
+#product_dimensions .custom-field-code label,
+#product_code .custom-field-dimension_width label,
+#product_code .custom-field-dimension_depth label,
+#product_code .custom-field-dimension_height label,
+#product_code .custom-field-code label {
+  display: inline !important;
+  margin-right: 10px;
+}
+#product_dimensions .custom-field-dimension_width input,
+#product_dimensions .custom-field-dimension_depth input,
+#product_dimensions .custom-field-dimension_height input,
+#product_dimensions .custom-field-code input,
+#product_code .custom-field-dimension_width input,
+#product_code .custom-field-dimension_depth input,
+#product_code .custom-field-dimension_height input,
+#product_code .custom-field-code input {
+  width: 100px !important;
+}
+#product_dimensions .custom-field-code input,
+#product_code .custom-field-code input {
+  width: 200px !important;
+}

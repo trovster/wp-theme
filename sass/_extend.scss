@@ -1,0 +1,51 @@
+// @extensions / imports
+
+%button {
+	position: relative;
+	display: inline-block;
+	padding: 10px 35px; margin: 0 auto;
+	color: #fff; text-decoration: none; text-transform: uppercase;
+	font-weight: 300; font-size: 12px; text-align: center; line-height: 1.1;
+	border: 3px solid #fff; border-radius: 8px;
+	cursor: pointer;
+
+	@include box-sizing(border-box);
+
+	background: #656972;
+	@include background(linear-gradient(#90939a, #393d48) left repeat);
+	
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff; text-decoration: none !important;
+		background: darken(#656972, 5%);
+	}
+	&:active {
+		@include transform(translate(1px, 1px));
+	}
+	.active & {
+		background: #656972;
+		@include background(linear-gradient(#90939a, #393d48) left repeat);
+	}
+}
+
+%inner {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto; padding: 0 30px;
+}
+
+%reset-list {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+%ion {
+	display: inline-block;
+	font-family: 'Ionicons';
+	speak: none;
+	font-style: normal; font-weight: normal; font-variant: normal;
+	text-transform: none; text-rendering: auto; line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

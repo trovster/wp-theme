@@ -1,0 +1,33 @@
+/*
+* @created		06/2014
+* @author		Trevor Morris / Surface
+* @project		XXXX
+* --------------------------------------------------------------------------------------------------*/
+@import 'vendor/bourbon/bourbon';
+//@import 'vendor/ionicons/ionicons';
+
+@import '_config';
+@import '_mixins';
+@import '_extend';
+
+@import 'core/__core';
+@import 'layout/__layout';
+@import 'modules/__modules';
+@import 'partials/__partials';
+
+	
+/* @group Clearing */
+.clear {
+	position: relative !important; overflow: hidden !important;
+	clear: both !important;
+	display: none;
+	width: 100% !important; height: 0 !important;
+	padding: 0 !important; margin: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+	
+	&.clear-2 {}
+	&.clear-3 {}
+	&.clear-4 {}
+}
+/* @end */

@@ -1,0 +1,34 @@
+/* @import */
+@import 'normalize';
+@import 'forms';
+@import 'tables';
+
+/**
+* =access
+* @section Accessible Hiding
+* --------------------------------------------------------------------------------------------------
+*/
+%access {
+	position: absolute; left: -9999px;
+	overflow: hidden;
+	height: 0; width: 0;
+	font-size: 0; line-height: 0;
+}
+
+/**
+* =replace
+* @section Image Replacement
+* @see http://phark.typepad.com/phark/2003/08/accessible_imag.html Phark Image Replacement
+* --------------------------------------------------------------------------------------------------
+*/
+%replace {
+	overflow: hidden;
+	display: block;
+	font-size: 0; line-height: 0; text-decoration: none; text-indent: 100%;
+	white-space: nowrap;
+	background: transparent no-repeat 0 0;
+	border: 0;
+	-moz-border-radius: 0; -webkit-border-radius: 0;
+	-o-border-radius: 0; -ms-border-radius: 0;
+	border-radius: 0;
+}

@@ -1,0 +1,15 @@
+/**
+* =footer
+* @section Footer information
+* --------------------------------------------------------------------------------------------------
+*/
+[role="contentinfo"] {
+	@include clearfix;
+
+	.inner {
+		@extend %inner;
+		padding-top: 30px; padding-bottom: 30px;
+		text-align: center;
+	}
+
+} // end of footer

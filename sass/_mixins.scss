@@ -1,0 +1,31 @@
+// @mixins
+
+@mixin inner() {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto; padding: 0 30px;
+}
+
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (max-width: $break_tablet) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width: $break_mobile) { @content; }
+	}
+	@else if $point == small {
+		@media (max-width: $break_small) { @content; }
+	}
+	@else if $point == tiny {
+		@media (max-width: $break_tiny) { @content; }
+	}
+	@else {
+		@media (max-width: $point) { @content; }
+	}
+}
+
+@mixin pie() {
+	html.lt-ie9 & {
+		behavior: url(/wp-content/themes/spaceoasis/css/PIE-1.0.0/PIE.php);
+	}
+}

@@ -1,0 +1,27 @@
+/**
+* =content
+* @section Content
+* --------------------------------------------------------------------------------------------------
+*/
+.content {
+	@include clearfix;
+	
+	.inner {
+		@include clearfix;
+		@extend %inner;
+		padding-top: 20px; padding-bottom: 20px;
+	}
+
+	> .inner {
+		
+		body.homepage & {
+			max-width: 1200px; min-height: 400px;
+			padding: 0;
+		}
+		
+		html.lt-ie9 & {
+			width: 960px;
+		}
+	}
+
+} // end of .content
